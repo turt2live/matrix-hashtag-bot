@@ -21,7 +21,7 @@ export class CommandProcessor {
                 const groupsCreated: string[] = [];
                 for (const hashtag of matches) {
                     if (hashtag.length <= 1 || hashtag.indexOf(":") !== -1) continue;
-                    const groupId = await this.createOrGetGroupHashtag(hashtag.substring(1));
+                    const groupId = await this.createOrGetGroupHashtag(hashtag.substring(1).toLowerCase());
                     groupsCreated.push(groupId);
                 }
 
