@@ -6,6 +6,8 @@ When a hashtag is mentioned, this bot creates a Matrix group.
 
 Questions? Ask away in [#hashtagbot:t2bot.io](https://matrix.to/#/#hashtagbot:t2bot.io)
 
+This is a **silly bot**, and a absurd usage of the groups API. Using it for #serious #business is discouraged.
+
 # Usage
 
 1. Invite `@hashtag:t2bot.io` to a room
