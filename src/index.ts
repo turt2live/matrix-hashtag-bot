@@ -1,4 +1,4 @@
-import { AutojoinRoomsMixin, MatrixClient, SimpleRetryJoinStrategy } from "matrix-bot-sdk";
+import { AutojoinRoomsMixin, AutojoinUpgradedRoomsMixin, MatrixClient, SimpleRetryJoinStrategy } from "matrix-bot-sdk";
 import config from "./config";
 import { LogService } from "matrix-js-snippets";
 import { CommandProcessor } from "./CommandProcessor";
@@ -24,6 +24,7 @@ client.getUserId().then(uid => {
     });
 
     AutojoinRoomsMixin.setupOnClient(client);
+    AutojoinUpgradedRoomsMixin.setupOnClient(client);
     client.setJoinStrategy(new SimpleRetryJoinStrategy());
     return client.start();
 }).then(() => LogService.info("index", "Hashtag bot started!"));
